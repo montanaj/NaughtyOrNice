@@ -9,7 +9,7 @@
 #import "CMJViewController.h"
 #import "Child.h"
 #import "AddChildViewControllerDelegate.h"
-
+#import "AddChildViewController.h"
 
 @interface CMJViewController () <UITableViewDelegate, UITableViewDataSource, AddChildViewControllerDelegate>
 @property (strong, nonatomic) IBOutlet UITableView *myTableView;
@@ -70,6 +70,14 @@
     
 }
 
+-(void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
+
+{
+    AddChildViewController *vc = segue.destinationViewController;
+    vc.delegate = self;
+    
+    
+}
 
 
 

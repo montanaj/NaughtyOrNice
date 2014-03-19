@@ -7,7 +7,10 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "AddChildViewControllerDelegate.h"
 
 @interface AddChildViewController : UIViewController
+
+@property id<AddChildViewControllerDelegate> delegate;
 
 @end

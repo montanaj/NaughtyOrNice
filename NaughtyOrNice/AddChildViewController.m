@@ -7,8 +7,10 @@
 //
 
 #import "AddChildViewController.h"
+#import "Child.h"
 
 @interface AddChildViewController ()
+@property (strong, nonatomic) IBOutlet UITextField *childBloomingTextField;
 
 @end
 
@@ -16,8 +18,13 @@
 
 - (IBAction)onNiceButtonPressed:(id)sender
 {
-
+    NSString *bloomingName = self.childBloomingTextField.text;
+    
+    Child *child = [[Child alloc]initNiceChildWithName:bloomingName];
+    [self.delegate addChildViewController:self didFinishWithNewChild:child];
+    
     [self dismissViewControllerAnimated:YES completion:nil];
+    
 }
 
 
@@ -25,6 +32,13 @@
 - (IBAction)onNaughtyButtonPressed:(id)sender
 {
 
+    
+    NSString *bloomingName = self.childBloomingTextField.text;
+    
+    Child *child = [[Child alloc]initNaughtyChildWithName:bloomingName];
+    [self.delegate addChildViewController:self didFinishWithNewChild:child];
+    
+    
     [self dismissViewControllerAnimated:YES completion:nil];
 }
 

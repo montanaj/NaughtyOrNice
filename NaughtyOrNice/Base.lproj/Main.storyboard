@@ -94,6 +94,9 @@
                         </subviews>
                         <color key="backgroundColor" red="1" green="0.50196081400000003" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                     </view>
+                    <connections>
+                        <outlet property="childBloomingTextField" destination="pse-n3-ds5" id="tjV-aA-KYr"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="arp-fA-yVK" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

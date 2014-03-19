@@ -7,8 +7,8 @@
 //
 
 #import <Foundation/Foundation.h>
-#import "AddChildViewController.h"
-
+@class AddChildViewController;
+@class Child;
 
 @protocol AddChildViewControllerDelegate
 
